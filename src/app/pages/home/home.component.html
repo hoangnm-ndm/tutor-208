@@ -1,0 +1,11 @@
+<h1>Noi dung homepage</h1>
+<section id="user-section" *ngIf="users && users.length > 0; else elseNonUser">
+  <div class="user-item" *ngFor="let user of users; index as i; count as total">
+    <p>{{ i + 1 }}/{{ total }}</p>
+    <p>Tên: {{ user.name | uppercase }}</p>
+    <p>Giới tính: {{ user.gender }}</p>
+  </div>
+</section>
+<ng-template #elseNonUser>Không tìm thấy thành viên nào!</ng-template>
+
+<!-- directive angular -->
