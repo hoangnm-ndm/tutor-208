@@ -5,6 +5,7 @@ import { LayoutClientComponent } from './layouts/layout-client/layout-client.com
 import { AboutComponent } from './pages/about/about.component';
 import { CategoriesComponent } from './pages/admin/categories/categories.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { ProductDetailComponent } from './pages/admin/product-detail/product-detail.component';
 import { ProductsComponent } from './pages/admin/products/products.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -25,9 +26,10 @@ const routes: Routes = [
     path: 'admin',
     component: LayoutAdminComponent,
     children: [
-      { path: '', redirectTo: '', pathMatch: 'full' },
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'products', component: ProductsComponent },
+      { path: 'product/detail/:id', component: ProductDetailComponent },
       { path: 'categories', component: CategoriesComponent },
     ],
   },
