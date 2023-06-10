@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": "JnaYvG6",
+      "name": "San pham A",
+      "price": 343,
+      "desc": "mo ta san pham"
+    },
+    {
+      "id": "Nk-nIMQ",
+      "name": "San pham B",
+      "price": 20000,
+      "desc": "mo ta san pham"
+    },
+    {
+      "id": "NlSFkSn",
+      "name": "San pham D",
+      "price": 2000006666,
+      "desc": "mo ta san pham"
+    },
+    {
+      "id": "dTodJJN",
+      "name": "San pham C",
+      "price": 2000,
+      "desc": "sdsdsds"
+    },
+    {
+      "id": "XsBhpuF",
+      "name": "San pham E",
+      "price": 5,
+      "desc": ""
+    }
+  ]
+}
