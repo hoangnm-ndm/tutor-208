@@ -13,7 +13,6 @@
                 ngModel
                 required
                 minlength="3"
-                maxlength="10"
                 #name="ngModel"
             />
             <!-- Nếu input có lỗi và khi tôi click vào input + thay đổi giá trị  -->
@@ -30,12 +29,6 @@
                     class="form-text text-danger"
                 >
                     Min length 3
-                </div>
-                <div
-                    *ngIf="name?.hasError('maxlength')"
-                    class="form-text text-danger"
-                >
-                    Max length 10
                 </div>
             </div>
         </div>
