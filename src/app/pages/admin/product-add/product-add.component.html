@@ -1,9 +1,43 @@
 <div class="container">
-    <form #formProductAdd="ngForm" (ngSubmit)="onHandleSubmit(formProductAdd)">
+    <form
+        novalidate
+        #formProductAdd="ngForm"
+        (ngSubmit)="onHandleSubmit(formProductAdd)"
+    >
         <div class="form-group mb-3">
             <label class="form-label">Tên sản phẩm</label>
-            <input type="text" name="name" class="form-control" ngModel />
-            <div class="form-text text-danger">Lỗi</div>
+            <input
+                type="text"
+                name="name"
+                class="form-control"
+                ngModel
+                required
+                minlength="3"
+                maxlength="10"
+                #name="ngModel"
+            />
+            <!-- Nếu input có lỗi và khi tôi click vào input + thay đổi giá trị  -->
+            <!-- Thì sẽ hiển thị div -->
+            <div *ngIf="name.invalid && (name?.dirty || name?.touched)">
+                <div
+                    *ngIf="name?.hasError('required')"
+                    class="form-text text-danger"
+                >
+                    Name is required
+                </div>
+                <div
+                    *ngIf="name?.hasError('minlength')"
+                    class="form-text text-danger"
+                >
+                    Min length 3
+                </div>
+                <div
+                    *ngIf="name?.hasError('maxlength')"
+                    class="form-text text-danger"
+                >
+                    Max length 10
+                </div>
+            </div>
         </div>
         <!--End control name-->
         <div class="form-group mb-3">
