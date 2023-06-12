@@ -10,6 +10,7 @@ import { ProductsComponent } from './pages/admin/products/products.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'products', component: ProductsComponent },
+      { path: 'products/add', component: ProductAddComponent },
       { path: 'product/detail/:id', component: ProductDetailComponent },
       { path: 'categories', component: CategoriesComponent },
     ],
@@ -43,4 +45,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

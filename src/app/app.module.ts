@@ -18,6 +18,7 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailComponent } from './pages/admin/product-detail/product-detail.component';
 import { RouterModule } from '@angular/router';
+import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { RouterModule } from '@angular/router';
     CategoriesComponent,
     NotfoundComponent,
     ProductDetailComponent,
+    ProductAddComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,4 +49,4 @@ import { RouterModule } from '@angular/router';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
