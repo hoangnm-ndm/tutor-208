@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailComponent } from './pages/admin/product-detail/product-detail.component';
 import { RouterModule } from '@angular/router';
 import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
+import { ProductEditComponent } from './pages/admin/product-edit/product-edit.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ProductAddComponent } from './pages/admin/product-add/product-add.compo
     NotfoundComponent,
     ProductDetailComponent,
     ProductAddComponent,
+    ProductEditComponent,
   ],
   imports: [
     BrowserModule,

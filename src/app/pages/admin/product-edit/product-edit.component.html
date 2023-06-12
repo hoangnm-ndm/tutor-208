@@ -1,5 +1,10 @@
 <div class="container">
-    <form novalidate [formGroup]="formProductAdd" (ngSubmit)="onHandleSubmit()">
+    <h2 class="my-4">Cập nhật sản phẩm</h2>
+    <form
+        novalidate
+        [formGroup]="formProductEdit"
+        (ngSubmit)="onHandleSubmit()"
+    >
         <div class="form-group mb-3">
             <label class="form-label">Tên sản phẩm</label>
             <input
@@ -10,19 +15,19 @@
             />
             <div
                 *ngIf="
-                    formProductAdd.controls['name']?.invalid &&
-                    (formProductAdd.controls['name']?.dirty ||
-                        formProductAdd.controls['name']?.touched)
+                    formProductEdit.controls['name']?.invalid &&
+                    (formProductEdit.controls['name']?.dirty ||
+                        formProductEdit.controls['name']?.touched)
                 "
             >
                 <div
-                    *ngIf="formProductAdd.get('name')?.hasError('required')"
+                    *ngIf="formProductEdit.get('name')?.hasError('required')"
                     class="form-text text-danger"
                 >
                     Name is required
                 </div>
                 <div
-                    *ngIf="formProductAdd.get('name')?.hasError('minlength')"
+                    *ngIf="formProductEdit.get('name')?.hasError('minlength')"
                     class="form-text text-danger"
                 >
                     Min length 3
@@ -32,22 +37,20 @@
         <!--End control name-->
         <div class="form-group mb-3">
             <label class="form-label">Giá sản phẩm</label>
-            <input type="number" name="price" class="form-control" />
-            <div class="form-text text-danger">Lỗi</div>
+            <input type="number" class="form-control" formControlName="price" />
         </div>
         <!--End control name-->
         <div class="form-group mb-3">
             <label class="form-label">Mô tả sản phẩm</label>
             <textarea
-                name="desc"
                 id=""
                 cols="30"
                 rows="10"
                 class="form-control"
+                formControlName="desc"
             ></textarea>
-            <div class="form-text text-danger">Lỗi</div>
         </div>
         <!--End control name-->
-        <button class="btn btn-primary">Submit</button>
+        <button class="btn btn-primary">Cập nhật</button>
     </form>
 </div>

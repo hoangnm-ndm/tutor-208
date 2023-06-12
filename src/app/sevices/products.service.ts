@@ -18,4 +18,7 @@ export class ProductsService {
   addProduct(product: IProduct): Observable<IProduct> {
     return this.http.post<IProduct>(`${this.API}`, product);
   }
+  editProduct(product: IProduct): Observable<IProduct> {
+    return this.http.post<IProduct>(`${this.API}/${product.id}`, product);
+  }
 }

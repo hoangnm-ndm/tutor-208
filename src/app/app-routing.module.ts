@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
+import { ProductEditComponent } from './pages/admin/product-edit/product-edit.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,7 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'products/add', component: ProductAddComponent },
+      { path: 'products/edit/:id', component: ProductEditComponent },
       { path: 'product/detail/:id', component: ProductDetailComponent },
       { path: 'categories', component: CategoriesComponent },
     ],
